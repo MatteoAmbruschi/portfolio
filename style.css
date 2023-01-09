@@ -316,6 +316,13 @@ section {
 .works-item-tags {
     font-size: 24px;
     color: #BEDA10;
+
+}
+
+@media screen and (max-width:576px) {
+    .works-item-tags {
+        font-size: 20px;
+    }
 }
 
 
