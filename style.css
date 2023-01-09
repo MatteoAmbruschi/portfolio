@@ -218,6 +218,9 @@ section {
     width: 100%;
     z-index: 5;
     background: linear-gradient(180deg, rgba(7,5,20,0.9780287114845938) 27%, rgba(8,4,30,0.865983893557423) 47%, rgba(8,3,39,0.48783263305322133) 78%, rgba(9,2,49,0) 96%);
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 @media screen and (max-width:576px) {
     .header {
@@ -270,7 +273,6 @@ section {
     position: sticky;
     top: -15px;
     margin-bottom: -3%;
-    z-index: 99;
 }
 
 @media screen and (max-width: 768px) {
