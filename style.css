@@ -43,11 +43,15 @@ body {
     z-index: 9999999;
     transform: translate(-8px, -8px);
     pointer-events: none;
+    mix-blend-mode: difference;
 }
 
 .outline.hover{
-width: 128px;
-height: 128px;
+background-color: rgba(255, 255, 255, 0.1);
+border-color: rgba(0, 0, 0, 0);
+backdrop-filter: blur(3px);
+width: 108px;
+height: 108px;
 transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 }
 
