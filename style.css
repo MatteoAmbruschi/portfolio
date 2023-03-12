@@ -77,7 +77,7 @@ h1, h2, h3 {
 h1 {
     font-size: 500%;
     font-weight: 600;
-    line-height: 1za<00%;
+    line-height: 100%;
 }
 
 @media screen and (max-width:576px) {
@@ -204,7 +204,7 @@ p {
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     color: #757575;
-    background-color: #0E0062;
+    background-color: rgba(16,26,98,1);
     padding: 12px 16px;
     width: 100%;
     border: none;
@@ -272,8 +272,9 @@ section {
     left: 0;
     width: 100%;
     z-index: 5;
-    backdrop-filter: blur(3px);
-  /*  background-color: #070514; */
+    background: linear-gradient(180deg, rgba(7,5,20,1) 27%, rgba(8,4,30,0.865983893557423) 47%, rgba(8,3,39,0.48783263305322133) 78%, rgba(9,2,49,0) 96%);
+    backdrop-filter: blur(2px);
+    
     -webkit-user-select: none;
     user-select: none;
 }
@@ -326,7 +327,7 @@ section {
 
 .works-menu {
     position: sticky;
-    top: -25px;
+    top: -20px;
     margin-bottom: -3%;
 }
 
@@ -469,7 +470,7 @@ section {
 }
 
 .footer {
-    background-image: linear-gradient(180deg, rgba(7,5,20,1) 0%, rgba(14,0,98,1) 100%);
+    background-image: linear-gradient(180deg, rgba(7,5,20,1) 0%, rgba(16,26,98,1) 100%);
     padding-top: 24px;
     padding-bottom: 24px;
 }
