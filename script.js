@@ -17,6 +17,49 @@ window.addEventListener('scroll', function() {
     }
 });
 
+///// DA FINIREEEE!!!!!
+
+const idbtn = document.getElementById('idbtn')
+window.addEventListener('scroll', function(){
+let btny = window.scrollY;
+
+if(btny < 400){
+  idbtn.style.fontSize = '16px'
+} else if(btny < 570){
+  idbtn.style.fontSize = '14px'
+} else{
+  idbtn.style.fontSize = '12px'
+}
+}); 
+
+const idbtn1 = document.getElementById('idbtn1')
+window.addEventListener('scroll', function(){
+let btny1 = window.scrollY;
+
+if(btny1 < 400){
+  idbtn1.style.fontSize = '16px'
+} else if(btny1 < 570){
+  idbtn1.style.fontSize = '14px'
+} else{
+  idbtn1.style.fontSize = '12px'
+}
+}); 
+
+const idbtn2 = document.getElementById('idbtn2')
+window.addEventListener('scroll', function(){
+let btny2 = window.scrollY;
+
+if(btny2 < 400){
+  idbtn2.style.fontSize = '16px'
+} else if(btny2 < 550){
+  idbtn2.style.fontSize = '14px'
+} else{
+  idbtn2.style.fontSize = '12px'
+}
+}); 
+
+//////////////////////////
+
 
 /*window.addEventListener('scroll', function() {
     let posY = window.scrollY;
