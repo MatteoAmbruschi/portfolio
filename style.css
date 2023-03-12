@@ -75,9 +75,9 @@ h1, h2, h3 {
 
 
 h1 {
-    font-size: 96px;
+    font-size: 500%;
     font-weight: 600;
-    line-height: 113px;
+    line-height: 1za<00%;
 }
 
 @media screen and (max-width:576px) {
@@ -151,12 +151,14 @@ p {
         margin-bottom: 7%;
     }    }
 
-
+#idbtn, #idbtn1, #idbtn2{
+    transition: all 1.5s cubic-bezier(.215, .61, .355, 1);
+}
 
 .button {
     background-color: #8279BB;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     padding: 12px 24px;
@@ -266,12 +268,12 @@ section {
 .header {
     position: fixed;
     top: 0;
-    padding-bottom: 0.6%;
+    padding-bottom: 0.5;
     left: 0;
     width: 100%;
     z-index: 5;
-    background: linear-gradient(180deg, rgba(7,5,20,0.9780287114845938) 27%, rgba(8,4,30,0.865983893557423) 47%, rgba(8,3,39,0.48783263305322133) 78%, rgba(9,2,49,0) 96%);
-
+    backdrop-filter: blur(3px);
+  /*  background-color: #070514; */
     -webkit-user-select: none;
     user-select: none;
 }
@@ -324,7 +326,7 @@ section {
 
 .works-menu {
     position: sticky;
-    top: -15px;
+    top: -25px;
     margin-bottom: -3%;
 }
 
