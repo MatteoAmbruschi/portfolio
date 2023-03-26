@@ -532,6 +532,10 @@ section {
 
 
 .text{
-    padding: 30px 20px 20px 0px;
+    padding-top: 80px;
+    width: 80%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 14px;
 }
