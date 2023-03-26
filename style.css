@@ -473,10 +473,38 @@ section {
     background-image: linear-gradient(180deg, rgba(7,5,20,1) 0%, rgba(16,26,98,1) 100%);
     padding-top: 24px;
     padding-bottom: 24px;
+    display: flex;
+}
+
+.containerFooter{
+    width: 80%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
 }
 
 .copyright {
     color: #757575;
+   display: flex;
+   width: 50%;
+   padding: 12px 24px;
+}
+.privacy {
+    color: #757575;
+    border: solid 1px #757575;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 12px 24px;
+    border-radius: 36px;
+    width: 20%;
+    transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
+    font-size: 14px;
+}
+.privacy:hover{
+    color: #ffffff;
+    border: solid 1px #ffffff; 
 }
 
 .anchors {

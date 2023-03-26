@@ -120,3 +120,13 @@ links.forEach((link) => {
     cursor.classList.remove('hover');
   });
 });
+
+
+
+
+
+const myButton = document.querySelector('#myButton');
+
+myButton.addEventListener('click', () => {
+  window.location.replace('cookie.html');
+});
