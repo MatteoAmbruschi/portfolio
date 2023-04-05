@@ -561,3 +561,35 @@ section {
 
      ::-webkit-scrollbar-thumb:hover{
             background-color: rgb(191, 218, 16, 0.7);}
+
+
+            .spin{
+
+                z-index: 0;
+             height: 500px;
+             display: flex;
+             position: relative;
+             margin-bottom: -500px;
+             margin-left: -600px;
+            }
+            .spin2{
+                z-index: 0;
+             height: 500px;
+             display: flex;
+             position: relative;
+             margin-bottom: -500px;
+             margin-left: 600px;
+            }
+            @media screen and (max-width:768px) {
+                .spin{
+                 overflow: hidden;
+                 margin: auto;
+                 height: 300px;
+                                }
+                .spin2{
+                overflow: hidden;
+                margin: auto;
+                height: 300px;
+                                                }
+                                                 }
+            
