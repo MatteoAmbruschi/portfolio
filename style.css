@@ -510,6 +510,13 @@ section {
     -webkit-user-select: none;
     user-select: none;
 }
+
+@media screen and (max-width:768px) {
+    .privacy{width: 100%;} .copyright{width: 100%;}
+}
+
+
+
 .privacy:hover{
     color: #ffffff;
     border: solid 1px #ffffff; 
