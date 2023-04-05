@@ -168,7 +168,8 @@ p {
     border-radius: 36px;
     transition: all 0.7s cubic-bezier(.215, .61, .35, 1);
     box-shadow: 0px 0px 13px 6px rgba(14, 0, 98, 0.45);
-
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 @media screen and (max-width:576px) {
@@ -504,6 +505,8 @@ section {
     width: 20%;
     transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
     font-size: 14px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .privacy:hover{
     color: #ffffff;
@@ -517,6 +520,8 @@ section {
 }
 
 .back-to-top {
+    -webkit-user-select: none;
+    user-select: none;
     background-image: url('img/freccia.png');
     background-repeat: no-repeat;
     background-position: center center;
