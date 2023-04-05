@@ -38,7 +38,7 @@ for (let i = 0; i < idbtn.length; i++) {
 const idbtn = document.getElementById('idbtn')
 window.addEventListener('scroll', function(){
 let btny = window.scrollY;
-
+if (window.innerWidth > 768) {
 if(btny < 500){
   idbtn.style.fontSize = '16px'
 } else if(btny < 700){
@@ -46,12 +46,12 @@ if(btny < 500){
 } else{
   idbtn.style.fontSize = '12px'
 }
-}); 
+}}); 
 
 const idbtn1 = document.getElementById('idbtn1')
 window.addEventListener('scroll', function(){
 let btny1 = window.scrollY;
-
+if (window.innerWidth > 768){
 if(btny1 < 500){
   idbtn1.style.fontSize = '16px'
 } else if(btny1 < 700){
@@ -59,12 +59,12 @@ if(btny1 < 500){
 } else{
   idbtn1.style.fontSize = '12px'
 }
-}); 
+}}); 
 
 const idbtn2 = document.getElementById('idbtn2')
 window.addEventListener('scroll', function(){
 let btny2 = window.scrollY;
-
+if (window.innerWidth > 768){
 if(btny2 < 500){
   idbtn2.style.fontSize = '16px'
 } else if(btny2 < 700){
@@ -72,7 +72,7 @@ if(btny2 < 500){
 } else{
   idbtn2.style.fontSize = '12px'
 }
-}); 
+}}); 
 
 //////////////////////////
 
