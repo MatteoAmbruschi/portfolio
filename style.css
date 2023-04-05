@@ -157,6 +157,7 @@ p {
 }
 
 .button {
+    opacity: 0;
     cursor: none;
     background-color: #8279BB;
     color: #ffffff;
@@ -245,6 +246,7 @@ section {
 
 
 .hero {
+    opacity: 0;
     background: linear-gradient(0deg, rgba(7,5,20,1) 0%, rgba(16,26,98,1) 31%);
     height: 100vh;
 }
