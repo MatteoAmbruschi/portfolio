@@ -268,7 +268,7 @@ section {
 
 .hero-cta {
     align-self: flex-end;
-    opacity: 1;
+    opacity: 0;
 }
 
 /* Header */

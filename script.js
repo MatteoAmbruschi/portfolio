@@ -136,7 +136,7 @@ myButton.addEventListener('click', () => {
 //////GSAP
 
 gsap.to(".hero", { opacity: 1, duration: 2.5,});
-gsap.from(".hero-cta", { opacity: 0, duration: 1, y: 20, stagger: 0.2});
+gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 20,});
 
 
 const button = document.querySelector('.button');
