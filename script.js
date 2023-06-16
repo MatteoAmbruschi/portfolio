@@ -141,7 +141,7 @@ gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 20, delay: 0.2,});
 
 const button = document.querySelector('.button');
 // Crea un observer per rilevare quando l'elemento entra a schermo
-const observer = new IntersectionObserver(entries => {
+{const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // Quando l'elemento entra a schermo, attiva l'animazione con GSAP
@@ -150,4 +150,29 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 // Aggiungi l'elemento all'observer
-observer.observe(button);
+observer.observe(button);}
+
+
+
+// ----------------------------------------------Observer 
+// elements
+var elements_to_watch = document.querySelectorAll('.watch'); //seleziono tutti elementi in pagina con quella classe
+// callback 
+var callback = function(items){
+  items.forEach((item) => {
+    if(item.isIntersecting){
+      item.target.classList.add("in-page"); //in-page è la classe dell'elemento quando è in pagina
+    } else{
+      item.target.classList.remove("in-page");
+    }
+  });
+}
+// observer                                         //vuol dire che deve entrare per il 30%
+var observer = new IntersectionObserver(callback, { threshold: 0.3 } );
+
+// apply
+elements_to_watch.forEach((element) => {
+
+  observer.observe(element); 
+
+});
