@@ -141,7 +141,7 @@ a:hover {
 }
 
 p {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 22px;
 }
 
@@ -475,6 +475,11 @@ section {
     flex-grow: 0;
     flex-shrink: 1;
 }
+
+.contacts-about > p {
+    font-size: 20px;
+}
+
 
 @media screen and (max-width:768px) {
     .contacts-content {
