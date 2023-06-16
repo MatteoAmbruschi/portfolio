@@ -12,7 +12,7 @@ html {
 body {
     background-color: #070514;
     color: #ffffff;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'apercu', 'Trebuchet MS', sans-serif;
      font-size: 100%; /*Da fare sempre*/
      cursor: none;
 } 
@@ -279,7 +279,7 @@ section {
     left: 0;
     width: 100%;
     z-index: 5;
-    background: linear-gradient(180deg, rgba(7,5,20,1) 27%, rgba(8,4,30,0.865983893557423) 47%, rgba(8,3,39,0.48783263305322133) 78%, rgba(9,2,49,0) 96%);
+    background: linear-gradient(180deg, rgba(7,5,20,1) 27%, rgba(8,4,30,0.865983893557423) 47%, rgba(8,3,39,0.5) 78%, rgba(9,2,49,0.15) 96%);
     backdrop-filter: blur(2px);
     
     -webkit-user-select: none;
@@ -295,26 +295,26 @@ section {
 .header-container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.logo {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 42px;
-    text-transform: uppercase;
+.logo>img{
+    width: 40px;
+    height: auto;
     margin-right: 64px;
-    transition: all 0.7s cubic-bezier(.215, .61, .35, 1);
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
+
 @media screen and (max-width:576px) {
-    .logo {
-        line-height: 25px;
-        margin-bottom: 5px;
-        font-size: 28px;
-        margin-right: auto;
+    .logo img{
+        width: 40px;
+        height: auto;
+        margin-right: 30px;
+        margin-top: 5%;
+        margin-bottom: 2%;
     }
 }
-
-.logo:hover{color: #8279BB; cursor: pointer;}
 
 
 
@@ -580,7 +580,7 @@ section {
 
             .spin{
 
-                z-index: 0;
+             z-index: 0;
              height: 500px;
              display: flex;
              position: relative;
@@ -588,7 +588,7 @@ section {
              margin-left: -600px;
             }
             .spin2{
-                z-index: 0;
+             z-index: 0;
              height: 500px;
              display: flex;
              position: relative;
