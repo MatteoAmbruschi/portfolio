@@ -287,8 +287,8 @@ section {
 }
 @media screen and (max-width:576px) {
     .header {
-        padding-top: 2%;
-        padding-bottom: 4%;
+        padding-top: 3%;
+        padding-bottom: 2%;
     }
 }
 
@@ -306,11 +306,11 @@ section {
     margin-bottom: 2%;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
     .logo img{
-        width: 40px;
+        width: 35px;
         height: auto;
-        margin-right: 30px;
+        margin-right: 24px;
         margin-top: 5%;
         margin-bottom: 2%;
     }
@@ -330,6 +330,17 @@ section {
 .menu ul li a {
     font-size: 24px;
 }
+
+@media screen and (max-width:768px) {
+    .menu ul li {
+        margin-right: 24px;
+    }
+    
+    .menu ul li a {
+        font-size: 20px;
+    }
+}
+
 
 
 .works-menu {
