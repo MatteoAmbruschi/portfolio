@@ -168,7 +168,7 @@ var callback = function(items){
   });
 }
 // observer                                         //vuol dire che deve entrare per il 30%
-var observer = new IntersectionObserver(callback, { threshold: 0.3 } );
+var observer = new IntersectionObserver(callback, { threshold: 0.5 } );
 
 // apply
 elements_to_watch.forEach((element) => {
