@@ -492,6 +492,13 @@ section {
     .contacts-form {
         width: 100%;
     }
+    .contacts-about > p {
+        font-size: 17px;
+        margin-bottom: 20%;
+    }
+    .contacts{
+        margin-top: -10%;
+    }
 }
 
 .footer {
