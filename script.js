@@ -17,25 +17,10 @@ window.addEventListener('scroll', function() {
     }
 });
 
-////////// Variante ma piu scattosa
+////////// Variante ma più lenta
 
-/* const idbtn = document.getElementsByClassName('prova');
-for (let i = 0; i < idbtn.length; i++) {
-  window.addEventListener('scroll', function(){
-    let btny = window.scrollY;
 
-    if(btny < 400){
-      idbtn[i].style.fontSize = '16px';
-    } else if(btny < 600){
-      idbtn[i].style.fontSize = '14px';
-    } else {
-      idbtn[i].style.fontSize = '12px';
-    }
-  });
-} */
-/////////////
-
-const idbtn = document.getElementById('idbtn')
+/* const idbtn = document.getElementById('idbtn')
 window.addEventListener('scroll', function(){
 let btny = window.scrollY;
 if (window.innerWidth > 768) {
@@ -72,10 +57,30 @@ if(btny2 < 500){
 } else{
   idbtn2.style.fontSize = '12px'
 }
-}}); 
+}});  */
+
+function handleScrollEvent(id, threshold1, threshold2) {
+  const btn = document.getElementById(id);
+  window.addEventListener('scroll', function () {
+    let btnY = window.scrollY;
+    if (window.innerWidth > 768) {
+      if (btnY < threshold1) {
+        btn.style.fontSize = '16px';
+      } else if (btnY < threshold2) {
+        btn.style.fontSize = '14px';
+      } else {
+        btn.style.fontSize = '12px';
+      }
+    }
+  });
+}
+
+handleScrollEvent('idbtn', 500, 700);
+handleScrollEvent('idbtn1', 500, 700);
+handleScrollEvent('idbtn2', 500, 700);
+
 
 //////////////////////////
-
 
 /*window.addEventListener('scroll', function() {
     let posY = window.scrollY;
