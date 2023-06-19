@@ -103,7 +103,7 @@ const button = document.querySelector('.button');
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // Quando l'elemento entra a schermo, attiva l'animazione con GSAP
-      gsap.to('.button', { opacity: 1, duration: 2, stagger: 0.2 });
+      gsap.to('.button', { opacity: 1, duration: 1, stagger: 0.2 });
       observer.unobserve(entry.target);
     }
   });
