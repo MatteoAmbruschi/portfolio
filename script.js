@@ -1,76 +1,46 @@
+
 const backBtn = document.getElementById('backBtn');
+const debounceDelay = 100; // Delay di debounce in millisecondi
 
 backBtn.addEventListener('click', function() {
-    console.log('prova clic pulsante')
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 });
 
-window.addEventListener('scroll', function() {
+const debounce = (func, delay) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+};
+
+const handleScroll = debounce(function() {
     let posY = window.scrollY;
-
-    if(posY > 600) {
-        backBtn.style.opacity = '1';
-        backBtn.style.cursor = 'pointer';
+    if (posY > 600) {
+        gsap.to(backBtn, { opacity: 1, cursor: 'pointer', duration: 0.3 });
     } else {
-        backBtn.style.opacity = '0';
-        backBtn.style.cursor = 'default';
+        gsap.to(backBtn, { opacity: 0, cursor: 'default', duration: 0.3 });
     }
-});
+}, debounceDelay);
 
-////////// Variante ma più lenta
+window.addEventListener('scroll', handleScroll);
 
 
-const idbtn = document.getElementById('idbtn')
-window.addEventListener('scroll', function(){
-let btny = window.scrollY;
-if (window.innerWidth > 768) {
-if(btny < 500){
-  idbtn.style.fontSize = '16px'
-} else if(btny < 700){
-  idbtn.style.fontSize = '14px'
-} else{
-  idbtn.style.fontSize = '12px'
-}
-}}); 
 
-const idbtn1 = document.getElementById('idbtn1')
-window.addEventListener('scroll', function(){
-let btny1 = window.scrollY;
-if (window.innerWidth > 768){
-if(btny1 < 500){
-  idbtn1.style.fontSize = '16px'
-} else if(btny1 < 700){
-  idbtn1.style.fontSize = '14px'
-} else{
-  idbtn1.style.fontSize = '12px'
-}
-}}); 
-
-const idbtn2 = document.getElementById('idbtn2')
-window.addEventListener('scroll', function(){
-let btny2 = window.scrollY;
-if (window.innerWidth > 768){
-if(btny2 < 500){
-  idbtn2.style.fontSize = '16px'
-} else if(btny2 < 700){
-  idbtn2.style.fontSize = '14px'
-} else{
-  idbtn2.style.fontSize = '12px'
-}
-}}); 
-/* 
 function handleScrollEvent(id, threshold1, threshold2) {
-  const btn = document.getElementById(id);
-  window.addEventListener('scroll', function () {
-    let btnY = window.scrollY;
+  const element = document.getElementById(id);
+  window.addEventListener('scroll', function() {
+    const btnY = window.scrollY;
     if (window.innerWidth > 768) {
+      let fontSize = '12px';
       if (btnY < threshold1) {
-        btn.style.fontSize = '16px';
+        fontSize = '16px';
       } else if (btnY < threshold2) {
-        btn.style.fontSize = '14px';
-      } else {
-        btn.style.fontSize = '12px';
+        fontSize = '14px';
       }
+      element.style.fontSize = fontSize;
     }
   });
 }
@@ -78,63 +48,54 @@ function handleScrollEvent(id, threshold1, threshold2) {
 handleScrollEvent('idbtn', 500, 700);
 handleScrollEvent('idbtn1', 500, 700);
 handleScrollEvent('idbtn2', 500, 700);
- */
 
-//////////////////////////
-
-/*window.addEventListener('scroll', function() {
-    let posY = window.scrollY;
-
-    if(posY > 500) {
-        backBtn.style.display = 'block';
-    } else {
-        backBtn.style.display = 'none';
-    }
-}); */
 
 
 const LogoUp = document.getElementById('LogoUp');
-
-LogoUp.addEventListener('click', function() {
-    console.log('prova clic pulsante')
-    window.scrollTo(0,0);
-});
-
-
-let outline = document.querySelector('.outline');
-let cursor = document.querySelector('.cursor');
-let links = document.querySelectorAll('a');
-
-document.addEventListener('mousemove', function(e){
-
-  let x = e.clientX;
-  let y = e.clientY;
-
-  outline.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
-  cursor.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
-});
-
-links.forEach((link) => {
-  link.addEventListener("mouseover", function() {
-    outline.classList.add('hover');
-    cursor.classList.add('hover');
-  });
-  
-  link.addEventListener("mouseleave", function() {
-    outline.classList.remove('hover');
-    cursor.classList.remove('hover');
-  });
-});
-
-
-
-
-
+const outline = document.querySelector('.outline');
+const cursor = document.querySelector('.cursor');
+const links = document.querySelectorAll('a');
 const myButton = document.querySelector('#myButton');
 
+// Funzione per il click sul pulsante LogoUp
+LogoUp.addEventListener('click', function() {
+  window.scrollTo(0, 0);
+});
+
+// Funzione per il movimento del cursore
+document.addEventListener('mousemove', function(e) {
+  const x = e.clientX;
+  const y = e.clientY;
+  const translation = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+
+  outline.style.transform = translation;
+  cursor.style.transform = translation;
+});
+
+// Funzioni per l'hover sui link
+function addHoverClass() {
+  outline.classList.add('hover');
+  cursor.classList.add('hover');
+}
+
+function removeHoverClass() {
+  outline.classList.remove('hover');
+  cursor.classList.remove('hover');
+}
+
+// Aggiunta degli event listener per l'hover sui link
+links.forEach(link => {
+  link.addEventListener("mouseover", addHoverClass);
+  link.addEventListener("mouseleave", removeHoverClass);
+});
+
+// Funzione per il click sul pulsante myButton
 myButton.addEventListener('click', () => {
   window.location.replace('cookie.html');
 });
+
+
+
 
 
 
@@ -151,6 +112,7 @@ const button = document.querySelector('.button');
     if (entry.isIntersecting) {
       // Quando l'elemento entra a schermo, attiva l'animazione con GSAP
       gsap.to('.button', { opacity: 1, duration: 2, stagger: 0.2 });
+      observer.unobserve(entry.target);
     }
   });
 });
@@ -161,23 +123,21 @@ observer.observe(button);}
 
 // ----------------------------------------------Observer 
 // elements
-var elements_to_watch = document.querySelectorAll('.watch'); //seleziono tutti elementi in pagina con quella classe
-// callback 
-var callback = function(items){
-  items.forEach((item) => {
-    if(item.isIntersecting){
-      item.target.classList.add("in-page"); //in-page è la classe dell'elemento quando è in pagina
-    } else{
-      item.target.classList.remove("in-page");
+// callback
+var callback = function(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-page");
+    } else {
+      entry.target.classList.remove("in-page");
     }
   });
-}
-// observer                                         //vuol dire che deve entrare per il 30%
-var observer = new IntersectionObserver(callback, { threshold: 0.35 } );
+};
+
+// observer
+var observer = new IntersectionObserver(callback, { threshold: 0.35 });
 
 // apply
-elements_to_watch.forEach((element) => {
-
-  observer.observe(element); 
-
+document.querySelectorAll('.watch').forEach(element => {
+  observer.observe(element);
 });
