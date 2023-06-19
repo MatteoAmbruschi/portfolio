@@ -50,34 +50,30 @@ handleScrollEvent('idbtn2', 500, 700);
 
 //modifica mouse
 const LogoUp = document.getElementById('LogoUp');
-LogoUp.addEventListener('click', function() {
-    window.scrollTo(0,0);
+LogoUp.addEventListener('click', () => {
+    window.scrollTo(0, 0);
 });
 
 const outline = document.querySelector('.outline');
 const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', function(e){
-  const { clientX: x, clientY: y } = e;
+document.addEventListener('mousemove', ({ clientX: x, clientY: y }) => {
   const translateValue = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
   outline.style.transform = translateValue;
   cursor.style.transform = translateValue;
 });
 
 const links = document.querySelectorAll('a');
-const handleLinkMouseover = () => {
-  outline.classList.add('hover');
-  cursor.classList.add('hover');
-};
-const handleLinkMouseleave = () => {
-  outline.classList.remove('hover');
-  cursor.classList.remove('hover');
+const handleLinkHover = (event) => {
+  outline.classList.toggle('hover', event.type === 'mouseover');
+  cursor.classList.toggle('hover', event.type === 'mouseover');
 };
 
 links.forEach((link) => {
-  link.addEventListener("mouseover", handleLinkMouseover);
-  link.addEventListener("mouseleave", handleLinkMouseleave);
+  link.addEventListener("mouseover", handleLinkHover);
+  link.addEventListener("mouseleave", handleLinkHover);
 });
+
 
 
 
