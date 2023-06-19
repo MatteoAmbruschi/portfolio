@@ -1,48 +1,44 @@
-
+// freccia torna su
 const backBtn = document.getElementById('backBtn');
-const debounceDelay = 100; // Delay di debounce in millisecondi
 
 backBtn.addEventListener('click', function() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
 });
 
-const debounce = (func, delay) => {
-  let timeoutId;
-  return function(...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      func.apply(this, args);
-    }, delay);
-  };
-};
-
-const handleScroll = debounce(function() {
+window.addEventListener('scroll', function() {
     let posY = window.scrollY;
-    if (posY > 600) {
-        gsap.to(backBtn, { opacity: 1, cursor: 'pointer', duration: 0.3 });
+
+    if(posY > 600) {
+        backBtn.style.opacity = '1';
+        backBtn.style.cursor = 'pointer';
     } else {
-        gsap.to(backBtn, { opacity: 0, cursor: 'default', duration: 0.3 });
+        backBtn.style.opacity = '0';
+        backBtn.style.cursor = 'default';
     }
-}, debounceDelay);
-
-window.addEventListener('scroll', handleScroll);
+});
 
 
-
+//3 pulsanti viola lavoro
 function handleScrollEvent(id, threshold1, threshold2) {
   const element = document.getElementById(id);
-  window.addEventListener('scroll', function() {
+  const mediaQuery = window.matchMedia('(min-width: 769px)');
+
+  function updateFontSize() {
     const btnY = window.scrollY;
-    if (window.innerWidth > 768) {
-      let fontSize = '12px';
-      if (btnY < threshold1) {
-        fontSize = '16px';
-      } else if (btnY < threshold2) {
-        fontSize = '14px';
-      }
-      element.style.fontSize = fontSize;
+    let fontSize = '12px';
+    
+    if (btnY < threshold1) {
+      fontSize = '16px';
+    } else if (btnY < threshold2) {
+      fontSize = '14px';
     }
-  });
+    
+    element.style.fontSize = fontSize;
+  }
+
+  if (mediaQuery.matches) {
+    window.addEventListener('scroll', updateFontSize);
+  }
 }
 
 handleScrollEvent('idbtn', 500, 700);
@@ -51,50 +47,46 @@ handleScrollEvent('idbtn2', 500, 700);
 
 
 
+
+//modifica mouse
 const LogoUp = document.getElementById('LogoUp');
+LogoUp.addEventListener('click', function() {
+    window.scrollTo(0,0);
+});
+
 const outline = document.querySelector('.outline');
 const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', function(e){
+  const { clientX: x, clientY: y } = e;
+  const translateValue = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+  outline.style.transform = translateValue;
+  cursor.style.transform = translateValue;
+});
+
 const links = document.querySelectorAll('a');
-const myButton = document.querySelector('#myButton');
-
-// Funzione per il click sul pulsante LogoUp
-LogoUp.addEventListener('click', function() {
-  window.scrollTo(0, 0);
-});
-
-// Funzione per il movimento del cursore
-document.addEventListener('mousemove', function(e) {
-  const x = e.clientX;
-  const y = e.clientY;
-  const translation = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
-
-  outline.style.transform = translation;
-  cursor.style.transform = translation;
-});
-
-// Funzioni per l'hover sui link
-function addHoverClass() {
+const handleLinkMouseover = () => {
   outline.classList.add('hover');
   cursor.classList.add('hover');
-}
-
-function removeHoverClass() {
+};
+const handleLinkMouseleave = () => {
   outline.classList.remove('hover');
   cursor.classList.remove('hover');
-}
+};
 
-// Aggiunta degli event listener per l'hover sui link
-links.forEach(link => {
-  link.addEventListener("mouseover", addHoverClass);
-  link.addEventListener("mouseleave", removeHoverClass);
+links.forEach((link) => {
+  link.addEventListener("mouseover", handleLinkMouseover);
+  link.addEventListener("mouseleave", handleLinkMouseleave);
 });
 
-// Funzione per il click sul pulsante myButton
+
+
+// Pulsante coockie
+const myButton = document.querySelector('#myButton');
+
 myButton.addEventListener('click', () => {
   window.location.replace('cookie.html');
 });
-
-
 
 
 
@@ -121,23 +113,21 @@ observer.observe(button);}
 
 
 
-// ----------------------------------------------Observer 
-// elements
-// callback
+//Observer 
 var callback = function(entries, observer) {
-  entries.forEach(entry => {
+  for (var i = 0; i < entries.length; i++) {
+    var entry = entries[i];
     if (entry.isIntersecting) {
       entry.target.classList.add("in-page");
     } else {
       entry.target.classList.remove("in-page");
     }
-  });
+  }
 };
 
-// observer
 var observer = new IntersectionObserver(callback, { threshold: 0.35 });
 
-// apply
-document.querySelectorAll('.watch').forEach(element => {
+var watchElements = document.querySelectorAll('.watch');
+watchElements.forEach(function(element) {
   observer.observe(element);
 });
