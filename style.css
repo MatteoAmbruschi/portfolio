@@ -636,7 +636,7 @@ section {
 .watch {
     opacity: 0;
     transition: all 1.2s cubic-bezier(.215, .61, .355, 1);
-    transform: scale(0.77);
+    transform: scale(0.8);
 }
 .in-page {
     opacity: 1; transform: scale(1);
