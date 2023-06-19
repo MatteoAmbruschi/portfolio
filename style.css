@@ -299,11 +299,11 @@ section {
 }
 
 .logo>img{
-    width: 40px;
+    width: 36px;
     height: auto;
     margin-right: 64px;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 7%;
+    margin-bottom: 3%;
     cursor: pointer;
 }
 
