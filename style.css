@@ -618,31 +618,29 @@ section {
             background-color: rgb(191, 218, 16, 0.7);}
 
 
-            .spin{
+            .splin{
              z-index: 0;
              height: 500px;
              display: flex;
              position: relative;
              margin-bottom: -500px;
              margin-left: -600px;
-             overflow: hidden;
             }
-            .spin2{
+            .splin2{
              z-index: 0;
              height: 500px;
              display: flex;
              position: relative;
              margin-bottom: -500px;
              margin-left: 600px;
-             overflow: hidden;
             }
             @media screen and (max-width:768px) {
-                .spin{
+                .splin{
                  overflow: hidden;
                  margin: auto;
                  height: 300px;
                                 }
-                .spin2{
+                .splin2{
                 overflow: hidden;
                 margin: auto;
                 height: 300px;

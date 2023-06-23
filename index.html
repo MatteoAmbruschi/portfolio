@@ -96,8 +96,8 @@
                     </div>
             </div>
 
-            <div class="spin">
-                <canvas id="canvas4d"></canvas>
+            <div class="splin">
+                <spline-viewer url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer>
              </div>
             
             
@@ -133,8 +133,8 @@
             </div>
 
 
-     <div class="spin2">
-        <canvas id="canvas3d"></canvas>
+     <div class="splin2">
+        <spline-viewer url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer>
      </div>
     
 
@@ -222,18 +222,7 @@
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" charset="UTF-8"></script>
 <script defer src="script.js"></script>
-
-<!-- SPLINE -->
-<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-<script type="importmap">
-  {
-    "imports": {
-      "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.371/build/runtime.js"
-    }
-  }
-</script>
-<script type="module" src="./src/main.js"></script>
-<!-- FINE SPLINE -->
+<script async type="module" src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"></script>
 
 </body>
 </html>
