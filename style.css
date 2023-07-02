@@ -537,19 +537,23 @@ section {
    width: 50%;
    padding: 12px 24px;
 }
+
+
+
 .privacy {
     color: #757575;
     border: solid 1px #757575;
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 12px 24px;
+    padding: 1px 24px;
     border-radius: 36px;
     width: 20%;
     transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
-    font-size: 14px;
+    font-size: 12px;
     -webkit-user-select: none;
     user-select: none;
+    text-align: center;
 }
 
 @media screen and (max-width:768px) {
@@ -562,6 +566,9 @@ section {
     color: #ffffff;
     border: solid 1px #ffffff; 
 }
+
+
+
 
 .anchors {
     visibility: hidden;

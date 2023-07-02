@@ -76,6 +76,7 @@ links.forEach((link) => {
 
 
 
+/* 
 
 // Pulsante coockie
 const myButton = document.querySelector('#myButton');
@@ -84,6 +85,7 @@ myButton.addEventListener('click', () => {
   window.location.replace('cookie.html');
 });
 
+ */
 
 
 
