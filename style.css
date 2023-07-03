@@ -479,7 +479,13 @@ section {
     align-self: flex-start;
 }
 
-.contacts { }
+.contacts {
+    margin-bottom: 32px;
+}
+@media screen and (max-width:576px) {
+    .contacts{
+        margin-bottom: 20px;
+    }    }
 
 .contacts-content {
     display: flex;
@@ -518,8 +524,8 @@ section {
 
 .footer {
     background-image: linear-gradient(180deg, rgba(7,5,20,1) 0%, rgba(16,26,98,1) 100%);
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 28px;
+    padding-bottom: 28px;
     display: flex;
 }
 
