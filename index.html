@@ -22,17 +22,6 @@
 
   gtag('config', 'G-87MJ8V5MHX');
 </script> -->
-
-
-<script type="text/javascript">
-    var _iub = _iub || [];
-    _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"enableLgpd":true,"floatingPreferencesButtonDisplay":"bottom-left","perPurposeConsent":true,"siteId":3214717,"usprApplies":true,"whitelabel":false,"cookiePolicyId":78426058,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","rejectButtonDisplay":true,"zIndex":222222 }};
-    </script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-</head>
-<body>
-    
     
     <!--         INIZIOO            -->
 
@@ -231,5 +220,28 @@
 <script defer src="script.js"></script>
 <script async type="module" src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"></script>
 
+<!-- IUBENDA -->
+<script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"enableLgpd":true,"floatingPreferencesButtonDisplay":"bottom-left","perPurposeConsent":true,"siteId":3214717,"usprApplies":true,"whitelabel":false,"cookiePolicyId":78426058,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","rejectButtonDisplay":true,"zIndex":222222 }};
+
+        setTimeout(function() {
+            var script1 = document.createElement('script');
+            script1.type = 'text/javascript';
+            script1.src = '//cdn.iubenda.com/cs/gpp/stub.js';
+            script1.async = true;
+            document.body.appendChild(script1);
+
+            var script2 = document.createElement('script');
+            script2.type = 'text/javascript';
+            script2.src = '//cdn.iubenda.com/cs/iubenda_cs.js';
+            script2.charset = 'UTF-8';
+            script2.async = true;
+            document.body.appendChild(script2);
+        }, 2000);
+</script>
+    
+</head>
+<body>
 </body>
 </html>
