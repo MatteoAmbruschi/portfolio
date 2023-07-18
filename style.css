@@ -638,6 +638,7 @@ section {
              position: relative;
              margin-bottom: -500px;
              margin-left: -600px;
+             overflow: hidden;
             }
             .splin2{
              z-index: 0;
@@ -646,6 +647,7 @@ section {
              position: relative;
              margin-bottom: -500px;
              margin-left: 600px;
+             overflow: hidden;
             }
             @media screen and (max-width:768px) {
                 .splin{
