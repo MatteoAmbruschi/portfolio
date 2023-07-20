@@ -153,7 +153,9 @@ p {
     }    }
 
 #idbtn, #idbtn1, #idbtn2{
-    transition: font-size 1.5s cubic-bezier(.215, .61, .355, 1);
+    transition: font-size 1.5s cubic-bezier(.215, .61, .355, 1), 
+                color 0.7s cubic-bezier(.215, .61, .355, 1),
+                background-color 0.7s cubic-bezier(.215, .61, .355, 1);
 }
 
 .button {
@@ -207,7 +209,7 @@ p {
 .input-textarea {
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
-    color: #757575;
+    color: #ffffff;
     background-color: rgba(16,26,98,1);
     padding: 12px 16px;
     width: 100%;
@@ -600,7 +602,7 @@ section {
     opacity: 0;
     transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
 }
-
+.back-to-top:hover {transform: scale(1.1);}
 
 .text{
     padding-top: 80px;
