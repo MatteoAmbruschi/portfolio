@@ -602,7 +602,10 @@ section {
     opacity: 0;
     transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
 }
-.back-to-top:hover {transform: scale(1.1);}
+
+@media screen and (min-width:576px) {
+   .back-to-top:hover {transform: scale(1.1);}
+}
 
 .text{
     padding-top: 80px;
