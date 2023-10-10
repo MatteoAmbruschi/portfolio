@@ -14,9 +14,19 @@ body {
     color: #ffffff;
     font-family: 'apercu', 'Trebuchet MS', sans-serif;
      font-size: 100%; /*Da fare sempre*/
-     cursor: none;
 } 
-
+@media screen and (min-width:576px) {
+    body{
+        cursor: none;
+    }
+    button:hover{
+        cursor: none;
+    }
+    
+    a:hover{
+        cursor: none;
+    }
+}
 
 
 .outline{
@@ -137,7 +147,6 @@ a {
 
 a:hover { 
     color: #BEDA10;
-    cursor: none;
 }
 
 p {
@@ -160,7 +169,6 @@ p {
 
 .button {
     opacity: 0;
-    cursor: none;
     background-color: #8279BB;
     color: #ffffff;
     font-size: 16px;
@@ -217,7 +225,6 @@ p {
     border-radius: 30px;
     margin-top: 8px;
     margin-bottom: 16px;
-    cursor: none;
 }
 @media screen and (max-width:576px) {
     .input-field,
