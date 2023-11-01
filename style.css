@@ -15,15 +15,15 @@ body {
     font-family: 'apercu', 'Trebuchet MS', sans-serif;
      font-size: 100%; /*Da fare sempre*/
 } 
-@media screen and (min-width:576px) {
+@media screen and (min-width:900px) {
     body{
         cursor: none;
     }
-    button:hover{
+    button{
         cursor: none;
     }
     
-    a:hover{
+    a{
         cursor: none;
     }
 }
@@ -70,7 +70,7 @@ transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
     height: 10px;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:900px) {
     .disattivare{
         display: none;
     }
