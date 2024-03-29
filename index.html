@@ -33,30 +33,30 @@
 
     <header class="header">
         <div class="container header-container">
-            <div id="LogoUp" class="logo"><img src="img/logo personale bianco.png" alt="logo personale"></div>
+            <div id="LogoUp" class="logo" onclick="lenis.scrollTo('#top')"><img src="img/logo personale bianco.png" alt="logo personale"></div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#works" onclick="lenis.scrollTo('#works')">Works</a></li>
+                    <li><a href="#contacts" onclick="lenis.scrollTo('#contacts')">Contacts</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="container hero-content">
             <h1>Hi, I'm<br>Matteo Ambruschi</h1>
-            <h3>a web developer<br>from Bergamo</h3>
-            <a class="hero-cta" href="#works">Discover my works</a>
+            <h3><i>a web developer<br>from Bergamo</i></h3>
+            <a class="hero-cta" href="#works" onclick="lenis.scrollTo('#works')">Discover my works</a>
         </div>
     </section>
 
     <section class="works-menu">
         <div class="container">
             <ul>
-                <li><a id="idbtn" class="button" href="#works">Business For Lawyers</a></li>
-                <li><a id="idbtn1" class="button" href="#work2">L'arte D'annodare</a></li>
-                <li><a id="idbtn2" class="button" href="#work3">Other works</a></li>
+                <li><a id="idbtn" class="button" href="#works" onclick="lenis.scrollTo('#works')">Business For Lawyers</a></li>
+                <li><a id="idbtn1" class="button" href="#work2" onclick="lenis.scrollTo('#work2')">L'arte D'annodare</a></li>
+                <li><a id="idbtn2" class="button" href="#work3" onclick="lenis.scrollTo('#work3')">Other works</a></li>
             </ul>
         </div>
     </section>
@@ -90,16 +90,16 @@
                     </div>
             </div>
 
-            <div class="splin">
+     <!--        <div class="splin">
                 <spline-viewer url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer>
              </div>
-            
+             -->
             
              
             <div class="images">
-                <img loading="lazy" class="image-right img watch" src="img/Promozione Avvocato.png" alt="">
-                <img loading="lazy" class="img watch" src="img/ebook.png" alt="">
-                <img loading="lazy" class="image-left img watch" src="img/marketing per avvocati.png" alt="">
+                <img class="image-right img watch" src="img/Promozione Avvocato.png" alt="">
+                <img class="img watch" src="img/ebook.png" alt="">
+                <img class="image-left img watch" src="img/marketing per avvocati.png" alt="">
             </div>
         </div>
 
@@ -127,15 +127,15 @@
             </div>
 
 
-     <div class="splin2">
+    <!--  <div class="splin2">
         <spline-viewer url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer>
      </div>
-    
+     -->
 
 
                     <div class="images">
-                        <img loading="lazy" class="image-left img watch" src="img/larte dannondare.png" alt="">
-                        <img loading="lazy" class="img piccolo watch" src="img/mockup.jpg" alt="">
+                        <img class="image-left img watch" src="img/larte dannondare.png" alt="">
+                        <img class="img piccolo watch" src="img/mockup.jpg" alt="">
 
                     </div>
      </div>          
@@ -166,10 +166,10 @@
             </div>
 
                     <div class="images">
-                        <img loading="lazy" class="image-left img watch" src="img/podcast.png" alt="">
-                        <img loading="lazy" class="image-right img watch" src="img/marinelli.png" alt="">
-                        <img loading="lazy" class="image-left img watch" src="img/prontolicenziamento.png" alt="">
-                        <img loading="lazy" class="image-right img watch" src="img/taniapucci.png" alt="">
+                        <img class="image-left img watch" src="img/podcast.png" alt="">
+                        <img class="image-right img watch" src="img/marinelli.png" alt="">
+                        <img class="image-left img watch" src="img/prontolicenziamento.png" alt="">
+                        <img class="image-right img watch" src="img/taniapucci.png" alt="">
                     </div>
         </div>
 
@@ -208,15 +208,20 @@
 <footer class="footer">
     <div class="containerFooter">
         <div class="copyright">Matteo Ambruschi copyright ℗ 2023</div>
-        <a href="https://www.iubenda.com/privacy-policy/78426058" target="_blank" class="privacy" >Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-        <a href="https://www.iubenda.com/privacy-policy/78426058/cookie-policy" target="_blank" class="privacy">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            <div class="containerPrivacy">
+                <a href="https://www.iubenda.com/privacy-policy/78426058" target="_blank" class="privacy" >Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                <a href="https://www.iubenda.com/privacy-policy/78426058/cookie-policy" target="_blank" class="privacy">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            </div>
     </div>
 </footer>
 
-<div id="backBtn" class="back-to-top"></div>
+<div id="backBtn" class="back-to-top" onclick="lenis.scrollTo('#top')"></div>
 
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" charset="UTF-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
 <script defer src="script.js"></script>
 <script async type="module" src="https://unpkg.com/@splinetool/viewer@0.9.420/build/spline-viewer.js"></script>
 

@@ -1,10 +1,6 @@
 // freccia torna su
 const backBtn = document.getElementById('backBtn');
 
-backBtn.addEventListener('click', function() {
-    window.scrollTo(0,0);
-});
-
 window.addEventListener('scroll', function() {
     let posY = window.scrollY;
 
@@ -18,42 +14,9 @@ window.addEventListener('scroll', function() {
 });
 
 
-//3 pulsanti viola lavoro
-function handleScrollEvent(id, threshold1, threshold2) {
-  const element = document.getElementById(id);
-  const mediaQuery = window.matchMedia('(min-width: 769px)');
-
-  function updateFontSize() {
-    const btnY = window.scrollY;
-    let fontSize = '12px';
-    
-    if (btnY < threshold1) {
-      fontSize = '16px';
-    } else if (btnY < threshold2) {
-      fontSize = '14px';
-    }
-    
-    element.style.fontSize = fontSize;
-  }
-
-  if (mediaQuery.matches) {
-    window.addEventListener('scroll', updateFontSize);
-  }
-}
-
-handleScrollEvent('idbtn', 500, 700);
-handleScrollEvent('idbtn1', 500, 700);
-handleScrollEvent('idbtn2', 500, 700);
-
-
 
 
 //modifica mouse
-const LogoUp = document.getElementById('LogoUp');
-LogoUp.addEventListener('click', () => {
-    window.scrollTo(0, 0);
-});
-
 const outline = document.querySelector('.outline');
 const cursor = document.querySelector('.cursor');
 
@@ -95,37 +58,73 @@ gsap.to(".hero", { opacity: 1, duration: 2.5,});
 gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 20, delay: 0.2,});
 
 
+//3 pulsanti viola lavoro
+if(window.innerWidth > 769){
+
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+  
+    function handleScrollEvent(id) {
+      gsap.to(id, {
+        fontSize: '12px',
+        padding: '10px 20px',
+        duration: 1,
+        scrollTrigger: {
+          scrub: 1,
+          trigger: id,
+          start: "top 90%",
+          end: "bottom 10%",
+        /*   markers: true, */
+        }
+      });
+    }
+  
+    const ids = ['idbtn', 'idbtn1', 'idbtn2'];
+    ids.forEach(id => handleScrollEvent(`#${id}`)); 
+  
+  });
+}
+
+
 const button = document.querySelector('.button');
-// Crea un observer per rilevare quando l'elemento entra a schermo
 {const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Quando l'elemento entra a schermo, attiva l'animazione con GSAP
-      gsap.to('.button', { opacity: 1, duration: 1, stagger: 0.2 });
+      gsap.to('.button', { opacity: 1, duration: 1.3, stagger: 0.3 });
       observer.unobserve(entry.target);
     }
   });
 });
-// Aggiungi l'elemento all'observer
 observer.observe(button);}
 
 
 
-//Observer 
-var callback = function(entries, observer) {
-  for (var i = 0; i < entries.length; i++) {
-    var entry = entries[i];
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in-page");
-    } else {
-      entry.target.classList.remove("in-page");
-    }
-  }
-};
+//Lavori
+const watchElements  = document.querySelectorAll('.watch')
 
-var observer = new IntersectionObserver(callback, { threshold: 0.35 });
+watchElements.forEach((watch) => {
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger)
+      gsap.to(watch, {
+        opacity: 1,
+        scale: 1,
+        filter: 'blur(0px)',
+        scrollTrigger: {
+          scrub: 1,
+          trigger: watch,
+          start: "top 90%",
+          end: "bottom 65%",
+        },
+      })
+  });
+})
 
-var watchElements = document.querySelectorAll('.watch');
-watchElements.forEach(function(element) {
-  observer.observe(element);
-});
+
+
+//lenis locomotive scroll
+const lenis = new Lenis()
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
