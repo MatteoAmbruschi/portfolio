@@ -664,6 +664,13 @@ html.lenis, html.lenis body {
         .works-item-tags {
             font-size: 18px;
         }
+
+
+        .splin2{
+            height: 500px;
+            margin-bottom: -500px;
+            margin-left: 500px;
+           }
   }
 
 

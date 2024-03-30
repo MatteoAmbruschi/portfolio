@@ -90,10 +90,10 @@
                     </div>
             </div>
 
-     <!--        <div class="splin">
+            <div class="splin">
                 <spline-viewer url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer>
              </div>
-             -->
+            
             
              
             <div class="images">
@@ -127,10 +127,10 @@
             </div>
 
 
-    <!--  <div class="splin2">
+     <div class="splin2">
         <spline-viewer url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer>
      </div>
-     -->
+    
 
 
                     <div class="images">
@@ -223,7 +223,65 @@
 
 <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
 <script defer src="script.js"></script>
-<!-- <script async type="module" src="https://unpkg.com/@splinetool/viewer@0.9.420/build/spline-viewer.js"></script> -->
+<script async type="module" src="https://unpkg.com/@splinetool/viewer@0.9.420/build/spline-viewer.js"></script>
+
+<!-- <script src="three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+<script src="OrbitControls.js"></script>
+
+<script>
+    // Crea una nuova scena
+    var scene = new THREE.Scene();
+
+    // Crea una nuova telecamera
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 10; // Aumenta la distanza della telecamera per rendere il telefono più piccolo
+
+    // Crea un renderer
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Aggiungi una luce
+    var light = new THREE.AmbientLight(0xffffff);
+    scene.add(light);
+
+    // Carica il modello
+    var loader = new THREE.GLTFLoader();
+    var model;
+    loader.load(
+        'iphone_larte.glb',  // Percorso al tuo modello GLB esportato da Blender
+        function(gltf) {
+            model = gltf.scene;
+            scene.add(model);
+
+            // Imposta la dimensione del modello
+            model.scale.set(0.4, 0.4, 0.4); // Scala il modello del 30%
+            model.rotation.y = 10;
+
+            // Aggiungi la gestione degli eventi del mouse per la rotazione
+            var controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true; // Abilita l'ammortizzazione per un movimento più fluido
+            controls.dampingFactor = 0.25; // Imposta il fattore di ammortizzazione
+        },
+        undefined,
+        function(error) {
+            console.error(error);
+        }
+    );
+
+    // Funzione per l'animazione
+    function animate() {
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+    }
+    animate();
+</script> -->
+
+
+
+
 
 <!-- IUBENDA -->
 <script type="text/javascript">
