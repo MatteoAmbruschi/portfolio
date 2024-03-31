@@ -234,6 +234,10 @@
         return (document.cookie.indexOf('cookie_accepted=true') !== -1);
     }
 
+    function setCookieAccepted() {
+        document.cookie = 'cookie_accepted=true; path=/'; 
+    }
+
     var _iub = _iub || [];
     _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":false,"enableLgpd":true,"floatingPreferencesButtonDisplay":"bottom-left","perPurposeConsent":true,"siteId":3214717,"usprApplies":true,"whitelabel":false,"cookiePolicyId":78426058,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","rejectButtonDisplay":true,"zIndex":222222 }};
 
@@ -242,7 +246,8 @@
             window.addEventListener('scroll', function() {
                 let posY = window.scrollY;
                 if (posY > 4250) {
-                    
+                    setCookieAccepted();
+
                     var script1 = document.createElement('script');
                     script1.type = 'text/javascript';
                     script1.src = '//cdn.iubenda.com/cs/gpp/stub.js';
