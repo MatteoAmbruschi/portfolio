@@ -33,7 +33,7 @@
 
     <header class="header">
         <div class="container header-container">
-            <div id="LogoUp" class="logo" onclick="lenis.scrollTo('#top')"><img src="img/logo personale bianco.png" alt="logo personale"></div>
+            <div id="LogoUp" class="logo"><img src="img/logo personale bianco.png" alt="logo personale" class="logoImg" onclick="lenis.scrollTo('#top')"></div>
             <nav class="menu">
                 <ul>
                     <li><a href="#works" onclick="lenis.scrollTo('#works')">Works</a></li>
@@ -71,7 +71,7 @@
 
         <div class="works-item">
             <div class="works-item-tags">Web Developer \ Online \ 2021</div>
-            <h2>Business For Lawyers</h2>
+            <h2 id="titleBfl">Business For Lawyers</h2>
 
            
 
@@ -90,8 +90,8 @@
                     </div>
             </div>
 
-            <div class="splin">
-               <spline-viewer url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer>
+            <div class="splin watch">
+               <spline-viewer async url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer>
              </div>
             
              
@@ -107,7 +107,7 @@
     <div class="works-item">
         <a class="anchors" id="work2"></a>
         <div class="works-item-tags">Web Developer \ Bergamo \ 2020</div>
-            <h2>L'arte D'annodare</h2>
+            <h2 id="titleLarte">L'arte D'annodare</h2>
 
             <div class="work-info">
                 <div class="work-info-label">Output</div>
@@ -126,8 +126,8 @@
             </div>
 
 
-     <div class="splin2">
-        <spline-viewer url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer>
+     <div class="splin2 watch">
+        <spline-viewer async url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer>
      </div>
     
 
@@ -143,7 +143,7 @@
 
     <div class="works-item">  
         <a class="anchors" id="work3"></a>
-        <div class="works-item-tags">Web Developer \ Online \ ????</div>
+        <div class="works-item-tags">Web Developer \ Online \ 20<div class="random-letters"></div></div>
             <h2>Other works</h2>
 
             <div class="work-info">
@@ -181,7 +181,7 @@
             <div class="container contacts-content">
                 <div class="contacts-about">
                    <h2>About me</h2>
-                   <p>I am a web developer enthusiast with a strong inclination towards graphic design.<br> I gained solid experience in the SEO industry and enjoy challenging myself with new opportunities that allow me to continuously improve.<br>
+                   <p id="aboutMe">I am a web developer enthusiast with a strong inclination towards graphic design.<br> I gained solid experience in the SEO industry and enjoy challenging myself with new opportunities that allow me to continuously improve.<br>
                     I am determined, proactive, and creative, always seeking innovative solutions to meet clients' needs and achieve set objectives.<br> My education and work experiences have allowed me to acquire in-depth knowledge in various technologies, including WordPress, HTML, CSS and JavaScript.</p>
                 </div>
                 <div class="contacts-form">
@@ -220,6 +220,8 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
+<script src="https://unpkg.com/split-type"></script>
+
 <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
 <script defer src="script.js"></script>
 <script async type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
@@ -227,23 +229,29 @@
 
 <!-- IUBENDA -->
 <script type="text/javascript">
+
         var _iub = _iub || [];
         _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"enableLgpd":true,"floatingPreferencesButtonDisplay":"bottom-left","perPurposeConsent":true,"siteId":3214717,"usprApplies":true,"whitelabel":false,"cookiePolicyId":78426058,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","rejectButtonDisplay":true,"zIndex":222222 }};
+        
+    document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener('scroll', function() {
+            let posY = window.scrollY;
+                if(posY > 4250) {
+                    var script1 = document.createElement('script');
+                    script1.type = 'text/javascript';
+                    script1.src = '//cdn.iubenda.com/cs/gpp/stub.js';
+                    script1.async = true;
+                    document.body.appendChild(script1);
 
-        setTimeout(function() {
-            var script1 = document.createElement('script');
-            script1.type = 'text/javascript';
-            script1.src = '//cdn.iubenda.com/cs/gpp/stub.js';
-            script1.async = true;
-            document.body.appendChild(script1);
-
-            var script2 = document.createElement('script');
-            script2.type = 'text/javascript';
-            script2.src = '//cdn.iubenda.com/cs/iubenda_cs.js';
-            script2.charset = 'UTF-8';
-            script2.async = true;
-            document.body.appendChild(script2);
-        }, 1750);
+                    var script2 = document.createElement('script');
+                    script2.type = 'text/javascript';
+                    script2.src = '//cdn.iubenda.com/cs/iubenda_cs.js';
+                    script2.charset = 'UTF-8';
+                    script2.async = true;
+                    document.body.appendChild(script2);
+                }
+        })
+    })
 </script>
     
 </head>
