@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function applyOpacity(opc) {
       gsap.from(opc, {
-        opacity: 0.2,
+        opacity: 0.1,
         scrollTrigger: {
           scrub: true,
           trigger: opc,
