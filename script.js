@@ -193,3 +193,8 @@ const titleLarte = document.getElementById('titleLarte')
 if(window.innerWidth < 400){
   titleLarte.innerHTML = "L'arte<br> D'annodare"
 }
+
+const titleBernardo = document.getElementById('titleBernardo')
+if(window.innerWidth < 370){
+  titleBernardo.innerHTML = "BERNARDO<br> PERUTA"
+}
