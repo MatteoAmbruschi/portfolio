@@ -682,10 +682,13 @@ html.lenis, html.lenis body {
             font-size: 18px;
         }
 
+        .splin{
+            margin-bottom: -490px;
+            margin-left: -500px;
+           }
 
         .splin2{
-            height: 500px;
-            margin-bottom: -500px;
+            margin-bottom: -490px;
             margin-left: 500px;
            }
     
