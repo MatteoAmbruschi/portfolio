@@ -54,8 +54,8 @@
     <section class="works-menu">
         <div class="container">
             <ul>
-                <li><a id="idbtn" class="button" href="#works" onclick="lenis.scrollTo('#works')">Business For Lawyers</a></li>
-                <li><a id="idbtn1" class="button" href="#work2" onclick="lenis.scrollTo('#work2')">L'arte D'annodare</a></li>
+                <li><a id="idbtn" class="button" href="#works" onclick="lenis.scrollTo('#works')">L'arte D'annodare</a></li>
+                <li><a id="idbtn1" class="button" href="#work2" onclick="lenis.scrollTo('#work2')">BERNARDO PERUTA</a></li>
                 <li><a id="idbtn2" class="button" href="#work3" onclick="lenis.scrollTo('#work3')">Other works</a></li>
             </ul>
         </div>
@@ -71,9 +71,9 @@
 <!-- Prima parte -->
 
     <div class="works-item">
-        <a class="anchors" id="work2"></a>
+        <a class="anchors" id="works"></a>
         <div class="works-item-tags">Web Developer \ Bergamo \ 2024</div>
-            <h2 id="titleLarte">L'arte D'annodare</h2>
+           <a href="https://lartedannodare.it" target="_blank"><h2 id="titleLarte">L'arte D'annodare</h2></a>
 
             <div class="work-info">
                 <div class="work-info-label">Output</div>
@@ -110,8 +110,9 @@
       <!-- Seconda parte -->
 
       <div class="works-item">
+        <a class="anchors" id="work2"></a>
         <div class="works-item-tags">Web Developer \ Bergamo \ 2023</div>
-        <h2 id="titleBernardo">Bernardo Peruta</h2>
+        <a href="https://bernardoperuta.com" target="_blank"><h2 id="titleBernardo">Bernardo Peruta</h2></a>
 
        
 
@@ -147,7 +148,7 @@
 
       <div class="works-item">
         <div class="works-item-tags">Web Developer \ Online \ 2021</div>
-        <h2 id="titleBfl">Business For Lawyers</h2>
+        <a href="https://businessforlawyers.it/" target="_blank"><h2 id="titleBfl">Business For Lawyers</h2></a>
 
        
 
@@ -259,13 +260,13 @@
 
 <script src="https://unpkg.com/split-type"></script>
 
-<script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
-<script defer src="script.js"></script>
-<script async type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+<script src="script.js"></script>
+<script defer async type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
 
 
 <!-- IUBENDA -->
-<script type="text/javascript">
+<script defer async type="text/javascript">
 
     function areCookiesAccepted() {
         return (document.cookie.indexOf('cookie_accepted=true') !== -1);

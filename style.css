@@ -292,11 +292,12 @@ section {
 
 .works-menu ul li {
     margin-right: 24px;
-    margin-bottom: 6%;
+    
 }
 
-
-.works-menu {}
+.works-item:nth-child(1){
+    margin-top: 6%;
+}
 
 .works-item {
     margin-bottom: 155px;
@@ -768,6 +769,13 @@ html.lenis, html.lenis body {
             margin-bottom: 70px;
          }
 
+         .works-menu ul li {
+            margin-bottom: 6%;
+        }
+
+        .works-item:nth-child(1){
+            margin-top: 0%;
+            }
 }
 
 
@@ -824,6 +832,10 @@ html.lenis, html.lenis body {
     .works-menu ul li {
         margin-bottom: 6%;
     }
+
+    .works-item:nth-child(1){
+        margin-top: 0%;
+        }
 
     .works-item {
         margin-bottom: 88px;
