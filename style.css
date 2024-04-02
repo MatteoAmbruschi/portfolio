@@ -400,6 +400,7 @@ section {
     margin-right: auto;
     margin-left: auto;
     display: flex;
+    align-items: center;
 }
 
 .copyright {
