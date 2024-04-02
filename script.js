@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
           trigger: opc,
           markers: false,
           start: "top 90%",
-          end: "top 55%",
+          end: "top 50%",
         }
       });
     }
