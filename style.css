@@ -901,6 +901,10 @@ html.lenis, html.lenis body {
     .contacts {
         margin-bottom: 60px;
      }
+
+     .hero-content a {
+        padding-top: 30px;
+    }
     
   }
 
