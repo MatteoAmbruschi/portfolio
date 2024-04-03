@@ -110,14 +110,13 @@ watchElements.forEach((watch) => {
 
 
 //lenis locomotive scroll
-if(window.innerWidth > 768){
 const lenis = new Lenis()
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
-}
+
 
 
 // Funzione per generare lettere casuali
