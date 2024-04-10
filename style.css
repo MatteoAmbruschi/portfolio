@@ -508,22 +508,21 @@ section {
 
 
             .splin{
-             z-index: 0;
              height: 500px;
-             display: flex;
-             position: relative;
              margin-bottom: -500px;
              margin-left: -600px;
              overflow: hidden;
             }
             .splin2{
-             z-index: 0;
              height: 500px;
-             display: flex;
-             position: relative;
              margin-bottom: -500px;
              margin-left: 600px;
              overflow: hidden;
+            }
+
+            .splin2 model-viewer, .splin model-viewer{
+                width: 100%;
+                height: 100%;
             }
 
 

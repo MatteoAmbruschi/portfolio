@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/grigino.png" type="image/x-icon">
 
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
     
@@ -93,7 +94,23 @@
 
 
      <div class="splin2 watch">
-        <spline-viewer async defer url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer>
+        <model-viewer 
+            alt="L'arte D'annodare"
+            src="lartedannodare_phone3.glb" 
+            camera-controls 
+            touch-action="pan-y"
+            loading="lazy"
+            disable-zoom
+            disable-tap
+            auto-rotate
+            rotation-per-second="0.3rad"
+            auto-scale="none"
+            disable-pan
+            camera-orbit="200deg 75deg 105%"
+            >
+        </model-viewer>
+        
+        <!-- <spline-viewer async defer url="https://prod.spline.design/apobIC-eu2V8GmdZ/scene.splinecode"></spline-viewer> -->
      </div>
     
 
@@ -129,9 +146,23 @@
                 <p>Web Design · JavaScript · HTML · CSS · Search Engine Optimization (SEO) · Google Analytics · Adobe Photoshop · Graphic Design · User Experience Design</p>
                 </div>
         </div>
-
         <div class="splin watch">
-           <spline-viewer async defer url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer>
+            <model-viewer 
+            alt="L'arte D'annodare"
+            src="phone_bernardo.glb" 
+            camera-controls 
+            touch-action="pan-y"
+            loading="lazy"
+            disable-zoom
+            disable-tap
+            auto-rotate
+            rotation-per-second="0.3rad"
+            auto-scale="none"
+            disable-pan
+            camera-orbit="160deg 75deg 105%"
+            >
+        </model-viewer>
+           <!-- <spline-viewer async defer url="https://prod.spline.design/JV20Vi5dtkuCsOuv/scene.splinecode"></spline-viewer> -->
          </div>
         
          
@@ -263,7 +294,7 @@
 
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
 <script src="script.js"></script>
-<script defer async type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
+<!-- <script defer async type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script> -->
 
 
 <!-- IUBENDA -->
