@@ -835,6 +835,12 @@ html.lenis, html.lenis body {
         padding: 4px 14px;
     } 
 
+
+    .contacts-content .button {
+        font-size: 90%;
+        padding: 6px 14px;
+    } 
+
     .input-label {
         font-size: 16px;
     }  
@@ -852,7 +858,7 @@ html.lenis, html.lenis body {
     }
 
     .works-menu ul li {
-        margin-bottom: 5%;
+        margin-bottom: 1.8vh;
     }
 
     .works-item:nth-child(1){
