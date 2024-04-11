@@ -831,8 +831,8 @@ html.lenis, html.lenis body {
 
     .button {
         align-items: left;
-        font-size: 80%;
-        padding: 6px 14px;
+        font-size: 70%;
+        padding: 4px 14px;
     } 
 
     .input-label {
@@ -852,7 +852,7 @@ html.lenis, html.lenis body {
     }
 
     .works-menu ul li {
-        margin-bottom: 6%;
+        margin-bottom: 5%;
     }
 
     .works-item:nth-child(1){
