@@ -507,22 +507,26 @@ section {
         }
 
 
-            .splin{
-             height: 500px;
-             margin-bottom: -500px;
-             margin-left: -600px;
+
+            .splin, .splin2{
+             height: 400px;
+             width: 260px;
+             position: absolute;
              overflow: hidden;
             }
-            .splin2{
-             height: 500px;
-             margin-bottom: -500px;
-             margin-left: 600px;
-             overflow: hidden;
-            }
+
+            .splin2{ left: 64%; }
+            .splin{ right: 64%; }
 
             .splin2 model-viewer, .splin model-viewer{
                 width: 100%;
                 height: 100%;
+            }
+
+            .container3D {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
 
@@ -613,6 +617,14 @@ html.lenis, html.lenis body {
         margin-bottom: 80px;
     }
 
+    .splin, .splin2{
+        height: 50%;
+        width: 20%;
+       }
+
+       .splin2{ left: 65%; }
+       .splin{ right: 65%; }
+       
   }
 
 
@@ -681,15 +693,13 @@ html.lenis, html.lenis body {
             font-size: 18px;
         }
 
-        .splin{
-            margin-bottom: -490px;
-            margin-left: -500px;
+        .splin, .splin2{
+            height: 40%;
+            width: 23%;
            }
-
-        .splin2{
-            margin-bottom: -490px;
-            margin-left: 500px;
-           }
+    
+           .splin2{ left: 68%; }
+           .splin{ right: 68%; }
     
     .contacts {
         margin-bottom: 70px;
@@ -780,6 +790,14 @@ html.lenis, html.lenis body {
         .works-item:nth-child(1){
             margin-top: 0%;
             }
+            
+            .splin, .splin2{
+                height: 280px;
+                width: 220px;
+                position: static;
+               }
+        
+               .splin2{order: -1  }
 }
 
 
@@ -904,6 +922,15 @@ html.lenis, html.lenis body {
      .hero-content a {
         padding-top: 15px;
     }
+
+    .splin, .splin2{
+        height: 280px;
+        width: 50%;
+        min-width: 180px;
+        position: static;
+       }
+
+       .splin2{order: -1  }
     
   }
 
@@ -973,18 +1000,6 @@ html.lenis, html.lenis body {
 
     .copyright {
        padding: 0px 0px;
-    }
-
-    .splin{
-        overflow: hidden;
-        margin: auto;
-        height: 300px;
-    }
-
-    .splin2{
-        overflow: hidden;
-        margin: auto;
-        height: 300px;
     }
 
 }
