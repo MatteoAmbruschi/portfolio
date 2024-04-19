@@ -30,8 +30,10 @@ document.addEventListener('mousemove', ({ clientX: x, clientY: y }) => {
 let buttonlink = document.querySelectorAll('button');
 let a = document.querySelectorAll('a');
 let logoImg = document.querySelectorAll('.logoImg');
+let buttonLoad = document.getElementById('button-load')
+let buttonLoad2 = document.getElementById('button-load2')
 
-let links = [...buttonlink, ...a, ...logoImg, backBtn];
+let links = [...buttonlink, ...a, ...logoImg, backBtn, buttonLoad, buttonLoad2];
 const handleLinkHover = (event) => {
   outline.classList.toggle('hover', event.type === 'mouseover');
   cursor.classList.toggle('hover', event.type === 'mouseover');
@@ -199,3 +201,10 @@ const titleBernardo = document.getElementById('titleBernardo')
 if(window.innerWidth < 370){
   titleBernardo.innerHTML = "BERNARDO<br> PERUTA"
 }
+
+//3d Caricamento
+document.querySelector('#button-load').addEventListener('click',
+() => document.querySelector('#lazy-load').dismissPoster());
+
+document.querySelector('#button-load2').addEventListener('click',
+() => document.querySelector('#lazy-load2').dismissPoster());

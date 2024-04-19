@@ -101,20 +101,25 @@
                             
                             <div class="splin2 watch">
                                 <model-viewer 
-                                    alt="L'arte D'annodare mockup phone"
-                                    src="lartedannodare_phone3.glb" 
-                                    camera-controls 
-                                    touch-action="pan-y"
-                                    loading="lazy"
-                                    disable-zoom
-                                    disable-tap
-                                    auto-rotate
-                                    rotation-per-second="0.3rad"
-                                    auto-scale="none"
-                                    disable-pan
-                                    camera-orbit="200deg 75deg 67%"
-                                    >
-                                </model-viewer>
+                                id="lazy-load" 
+                                reveal="manual" 
+                                alt="L'arte D'annodare mockup phone"
+                                src="lartedannodare_phone3.glb" 
+                                camera-controls 
+                                touch-action="pan-y"
+                                loading="lazy"
+                                disable-zoom
+                                disable-tap
+                                auto-rotate
+                                rotation-per-second="0.3rad"
+                                auto-scale="none"
+                                disable-pan
+                                camera-orbit="200deg 75deg 67%">
+
+                                    <div id="lazy-load-poster" slot="poster"></div>
+                                    <div id="button-load" slot="poster">Carica Modello 3D</div>
+                                  </model-viewer>
+                                  
                              </div>
                     </div>
                         <img class="img img watch" src="img/larte dannondare contatti.png" alt="contact page l'arte d'annodare">
@@ -152,8 +157,11 @@
         <div class="images">
                 <div class="container3D">
                     <div class="splin watch">
-                        <model-viewer 
-                        alt="Benrado Peruta mockup phone"
+
+                    <model-viewer 
+                    id="lazy-load2" 
+                    reveal="manual" 
+                    alt="Benrado Peruta mockup phone"
                         src="phone_bernardo.glb" 
                         camera-controls 
                         touch-action="pan-y"
@@ -164,9 +172,12 @@
                         rotation-per-second="0.3rad"
                         auto-scale="none"
                         disable-pan
-                        camera-orbit="160deg 75deg 67%"
-                        >
-                    </model-viewer>
+                        camera-orbit="160deg 75deg 67%">
+
+                        <div id="lazy-load-poster" slot="poster"></div>
+                        <div id="button-load2" slot="poster">Carica Modello 3D</div>
+                      </model-viewer>
+                    
                      </div>
                      <img class="image-right img watch" src="img/Bernado Peruta.png" alt="home page bernardo peruta">
                 </div>
