@@ -571,6 +571,7 @@ section {
                 transform: translate3d(-50%, -50%, 0);
                 z-index: 2;
                 transition: all 0.7s cubic-bezier(.215, .61, .35, 1);
+                font-family: 'apercu', 'Trebuchet MS', sans-serif;
               }
             
               #button-load:hover, #button-load2:hover{
