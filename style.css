@@ -549,7 +549,7 @@ section {
                 background-position: center;
                 height: 250px;
                 width: auto;
-                align-self: center;
+                align-self: center !important;
                 z-index: 1;
               }
 
