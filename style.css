@@ -542,14 +542,14 @@ section {
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 0;
+                top: 18%;
                 bottom: 0;
                 background-size: contain;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: center center;
                 height: 250px;
                 width: auto;
-                align-self: center !important;
+                /* align-self: center !important; */
                 z-index: 1;
               }
 
