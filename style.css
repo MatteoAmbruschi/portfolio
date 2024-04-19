@@ -549,7 +549,6 @@ section {
                 background-position: center center;
                 height: 250px;
                 width: auto;
-                /* align-self: center !important; */
                 z-index: 1;
               }
 
@@ -679,6 +678,7 @@ html.lenis, html.lenis body {
        
        #lazy-load-poster {
         height: 210px;
+        top: 24%;
       }
 
       #button-load, #button-load2{
@@ -769,6 +769,7 @@ html.lenis, html.lenis body {
 
      #lazy-load-poster {
         height: 180px;
+        top: 19%;
       }
 
       #button-load, #button-load2{
@@ -874,6 +875,7 @@ html.lenis, html.lenis body {
 
        #lazy-load-poster {
         height: 200px;
+        top: 12%;
       }
 
       #button-load, #button-load2{
@@ -1025,6 +1027,7 @@ html.lenis, html.lenis body {
        #lazy-load-poster {
         height: 38vw;
         min-height: 180px;
+        top: 15%;
       }
 
       #button-load, #button-load2{
