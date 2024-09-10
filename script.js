@@ -71,8 +71,8 @@ cells.forEach(cell => {
 
 
 //////GSAP
-gsap.to(".hero-content", { opacity: 1, duration: 2.5,});
-gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 30, delay: 0.2,});
+/* gsap.to(".hero-content", { opacity: 1, duration: 2.5,}); */
+gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 30, delay: 0.4,});
 
 
 //3 pulsanti viola lavoro
