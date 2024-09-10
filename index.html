@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matteo Ambruschi - Web developer & more</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/grigino.png" type="image/x-icon">
 
-    <!-- Google tag (gtag.js) -->
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-87MJ8V5MHX"></script>
+<!-- Google tag (gtag.js) -->    
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-87MJ8V5MHX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-87MJ8V5MHX');
-</script>
+</script> -->
     
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+</head>
+
     <!--         INIZIOO            -->
 <body>
 
@@ -32,7 +32,7 @@
 
     <header class="header">
         <div class="container header-container">
-            <div id="LogoUp" class="logo"><img src="img/logo personale bianco.png" alt="logo personale" class="logoImg" onclick="lenis.scrollTo('#top')"></div>
+            <div id="LogoUp" class="logo"><img src="img/logo personale bianco.png" alt="logo personale" class="logoImg" onclick="lenis.scrollTo(0)"></div>
             <nav class="menu">
                 <ul>
                     <li><a onclick="lenis.scrollTo('#works')">Works</a></li>
@@ -42,13 +42,17 @@
         </div>
     </header>
 
-    <section class="hero" id="top">
-        <div class="container hero-content">
-            <h1>Hi, I'm<br>Matteo Ambruschi</h1>
-            <h3><i>a web developer<br>from Bergamo</i></h3>
-            <a class="hero-cta" onclick="lenis.scrollTo('#works')">Discover my works</a>
-        </div>
-    </section>
+    <div id="idContainer">
+        <section class="hero" id="top">
+            <div class="container hero-content">
+                <h4><span class="vibes">M</span>atteo <span class="vibes">A</span>mbruschi</h4>
+                <h4>Independent Web</h4>
+                <h4><span class="mond">☽Developer♢</span></h4>
+                <h4>Based in Italy</h4>
+                <h4>Portfolio<span class="mond">©</span>2024<span class="mond">☂⛅</span></h4>
+                <span class="mond hero-cta">↓</span>
+            </div>
+        </section>
 
     <section class="works-menu">
         <div class="container">
@@ -72,7 +76,7 @@
     <div class="works-item">
         <a class="anchors" id="works"></a>
         <div class="works-item-tags">Web Developer \ Bergamo \ 2024</div>
-           <a href="https://lartedannodare.it/" target="_blank"><h2 id="titleLarte">L'arte D'annodare</h2></a>
+           <a href="https://lartedannodare.it/" target="_blank"><h2>L'arte D'annodare</h2></a>
 
             <div class="work-info">
                 <div class="work-info-label">Output</div>
@@ -86,7 +90,7 @@
             <div class="work-info">
                 <div class="work-info-label skllilsLab">Skills</div>
                 <div class="work-info-content skills">
-                    <p>Web Design · Next.js Developer · HTML · CSS · JavaScript · Search Engine Optimization (SEO) · Analytics · Adobe Illustrator · Adobe InDesign · Graphic Design · Adobe Photoshop</p>
+                    <p>Next.js · React · HTML · CSS · JavaScript · Web Design · Search Engine Optimization (SEO) · Analytics · Adobe Illustrator · Adobe InDesign · Graphic Design · Adobe Photoshop</p>
                     </div>
             </div>
 
@@ -102,7 +106,9 @@
                             <div class="splin2 watch">
                                 <model-viewer 
                                 id="lazy-load" 
-                                reveal="manual" 
+                                reveal="manual"
+                                minimumRenderScale="0.25"
+                                powerPreference="low-power"
                                 alt="L'arte D'annodare mockup phone"
                                 src="lartedannodare_phone3.glb" 
                                 camera-controls 
@@ -123,7 +129,7 @@
                              </div>
                     </div>
                         <img class="img img watch" src="img/larte dannondare contatti.png" alt="contact page l'arte d'annodare">
-                        <img class="image-right piccolo watch" src="img/mockup.jpg" alt="mockup l'arte d'annodare">
+                        <img class="image-right img watch" src="img/larte dannondare lavaggio.png" alt="mockup l'arte d'annodare">
 
                     </div>
      </div>          
@@ -134,7 +140,7 @@
       <div class="works-item">
         <a class="anchors" id="work2"></a>
         <div class="works-item-tags">Web Developer \ Bergamo \ 2023</div>
-        <a href="https://bernardoperuta.com/" target="_blank"><h2 id="titleBernardo">Bernardo Peruta</h2></a>
+        <a href="https://bernardoperuta.com/" target="_blank"><h2>Bernardo Peruta</h2></a>
 
        
 
@@ -148,7 +154,7 @@
         <div class="work-info">
             <div class="work-info-label skllilsLab">Skills</div>
             <div class="work-info-content skills">
-                <p>Web Design · JavaScript · HTML · CSS · Search Engine Optimization (SEO) · Google Analytics · Adobe Photoshop · Graphic Design · User Experience Design</p>
+                <p>JavaScript · HTML · CSS · Web Design · Search Engine Optimization (SEO) · Google Analytics · Adobe Photoshop · Graphic Design · User Experience Design</p>
                 </div>
         </div>
     
@@ -160,7 +166,9 @@
 
                     <model-viewer 
                     id="lazy-load2" 
-                    reveal="manual" 
+                    reveal="manual"
+                    minimumRenderScale="0.25"
+                    powerPreference="low-power"
                     alt="Bernado Peruta mockup phone"
                         src="phone_bernardo.glb" 
                         camera-controls 
@@ -192,7 +200,7 @@
 
       <div class="works-item">
         <div class="works-item-tags">Web Developer \ Online \ 2021</div>
-        <a href="https://businessforlawyers.it/" target="_blank"><h2 id="titleBfl">Business For Lawyers</h2></a>
+        <a href="https://businessforlawyers.it/" target="_blank"><h2>Business For Lawyers</h2></a>
 
        
 
@@ -207,7 +215,7 @@
         <div class="work-info">
             <div class="work-info-label skllilsLab">Skills</div>
             <div class="work-info-content skills">
-                <p>Web Design · WordPress Developer · HTML · CSS · Search Engine Optimization (SEO) · Google Analytics · Adobe Premiere Pro · Adobe Illustrator · Adobe Photoshop · Graphic Design · Advertising · User Experience Design</p>
+                <p>WordPress · HTML · CSS · Web Design · Search Engine Optimization (SEO) · Google Analytics · Adobe Premiere Pro · Adobe Illustrator · Adobe Photoshop · Graphic Design · Advertising · User Experience Design</p>
                 </div>
         </div>
          
@@ -225,7 +233,7 @@
     <div class="works-item">  
         <a class="anchors" id="work3"></a>
         <div class="works-item-tags">Web Developer \ Online \ 20<div class="random-letters"></div></div>
-            <h2>Other works</h2>
+            <h2>Bunch of other works</h2>
 
             <div class="work-info">
                 <div class="work-info-label">Output</div>
@@ -288,24 +296,24 @@
             </div>
         </section>
 
-<footer class="footer">
-    <div class="containerFooter">
-        <div class="copyright">Matteo Ambruschi copyright ℗ 2024</div>
-            <div class="containerPrivacy">
-                <a href="https://www.iubenda.com/privacy-policy/78426058" target="_blank" class="privacy" >Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-                <a href="https://www.iubenda.com/privacy-policy/78426058/cookie-policy" target="_blank" class="privacy">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-            </div>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="containerFooter">
+            <div class="copyright">Matteo Ambruschi copyright ℗ 2024</div>
+                <div class="containerPrivacy">
+                    <a href="https://www.iubenda.com/privacy-policy/78426058" target="_blank" class="privacy" >Privacy Policy</a><!-- <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> -->
+                    <a href="https://www.iubenda.com/privacy-policy/78426058/cookie-policy" target="_blank" class="privacy">Cookie Policy</a>
+                </div>
+        </div>
+    </footer>
+</div>
 
-<div id="backBtn" class="back-to-top" onclick="lenis.scrollTo('#top')"></div>
+<div id="backBtn" class="back-to-top" onclick="lenis.scrollTo(0)"></div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-<script src="https://unpkg.com/split-type"></script>
-
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+<script src="grained.min.js"></script>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
 <script src="script.js"></script>
 
@@ -313,7 +321,7 @@
 
 
 <!-- IUBENDA -->
-<script defer async type="text/javascript">
+<!-- <script defer async type="text/javascript">
 
     function areCookiesAccepted() {
         return (document.cookie.indexOf('cookie_accepted=true') !== -1);
@@ -349,9 +357,6 @@
             });
         }
     });
-</script>
-
-    
-</head>
+</script> -->
 </body>
 </html>

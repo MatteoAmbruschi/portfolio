@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger)
 
+Splitting(); 
+
 // freccia torna su
 const backBtn = document.getElementById('backBtn');
 
@@ -30,25 +32,47 @@ document.addEventListener('mousemove', ({ clientX: x, clientY: y }) => {
 let buttonlink = document.querySelectorAll('button');
 let a = document.querySelectorAll('a');
 let logoImg = document.querySelectorAll('.logoImg');
-let buttonLoad = document.getElementById('button-load')
-let buttonLoad2 = document.getElementById('button-load2')
+let buttonLoad = document.getElementById('button-load');
+let buttonLoad2 = document.getElementById('button-load2');
 
-let links = [...buttonlink, ...a, ...logoImg, backBtn, buttonLoad, buttonLoad2];
+let links = [...buttonlink, ...a, ...logoImg, backBtn, buttonLoad, buttonLoad2].filter(Boolean);
+
 const handleLinkHover = (event) => {
   outline.classList.toggle('hover', event.type === 'mouseover');
   cursor.classList.toggle('hover', event.type === 'mouseover');
 };
 
 links.forEach((link) => {
-  link.addEventListener("mouseover", handleLinkHover);
-  link.addEventListener("mouseleave", handleLinkHover);
+  link.addEventListener('mouseover', handleLinkHover);
+  link.addEventListener('mouseleave', handleLinkHover);
+});
+
+
+//SLPLITING
+const results = Splitting({
+  target: '.hero', // Target la sezione hero
+  by: 'cells',     // Segmenta in celle (griglia)
+  rows: 10,         // Numero di righe nella griglia
+  columns: 20      // Numero di colonne nella griglia
+});
+
+const cells = document.querySelectorAll('.cell')
+
+cells.forEach(cell => {
+  cell.addEventListener('mouseover', () => {
+    cell.style.background = '#FFFFFF'; 
+    cell.style.mixBlendMode= 'difference';
+    setTimeout(() => {
+      cell.style.background = 'none'
+    }, 370)
+  });
 });
 
 
 
 //////GSAP
-gsap.to(".hero", { opacity: 1, duration: 2.5,});
-gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 20, delay: 0.2,});
+gsap.to(".hero-content", { opacity: 1, duration: 2.5,});
+gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 30, delay: 0.2,});
 
 
 //3 pulsanti viola lavoro
@@ -146,24 +170,26 @@ function generateRandomLetters() {
 
 
 //EFFETTO TITOLI 
-document.addEventListener("DOMContentLoaded", () => {
-  const splitTypes = document.querySelectorAll('h2')
-  splitTypes.forEach((char, i) => {
-      const text = new SplitType(char, { types: 'chars'})
-
-      gsap.from(text.chars, {
-          scrollTrigger: {
-              trigger: char,
-              start: 'top 90%',
-              end: 'top 23%',
-              scrub: true,
-              markers: false,
-          },
-          opacity: 0.2,
-          stagger: 0.1,
-      })
-  })
-
+  document.addEventListener("DOMContentLoaded", () => {
+    const splitTypes = document.querySelectorAll('h2')
+    splitTypes.forEach((char, i) => {
+        const result = Splitting({ target: char, by: 'chars'})
+        const text = result[0].chars;
+        console.log(text)
+  
+        gsap.from(text, {
+            scrollTrigger: {
+                trigger: char,
+                start: 'top 90%',
+                end: 'top 23%',
+                scrub: true,
+                markers: false,
+            },
+            opacity: 0.2,
+            stagger: 0.1,
+        })
+    })
+  
     function applyOpacity(opc) {
       gsap.from(opc, {
         opacity: 0.1,
@@ -187,24 +213,58 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-const titleBfl = document.getElementById('titleBfl')
-if(window.innerWidth < 470){
-  titleBfl.innerHTML = 'Business For<br> Lawyers'
-}
-
-const titleLarte = document.getElementById('titleLarte')
-if(window.innerWidth < 400){
-  titleLarte.innerHTML = "L'arte<br> D'annodare"
-}
-
-const titleBernardo = document.getElementById('titleBernardo')
-if(window.innerWidth < 370){
-  titleBernardo.innerHTML = "BERNARDO<br> PERUTA"
-}
-
 //3d Caricamento
 document.querySelector('#button-load').addEventListener('click',
 () => document.querySelector('#lazy-load').dismissPoster());
 
 document.querySelector('#button-load2').addEventListener('click',
 () => document.querySelector('#lazy-load2').dismissPoster());
+
+
+//GRANA
+var options = {
+  animate: true,
+  patternWidth: 140,
+  patternHeight: 140,
+  grainOpacity: 0.063,
+  grainDensity: 1,
+  grainWidth: 1,
+  grainHeight: 1
+};
+grained('#idContainer', options)
+grained('#top', options)
+
+
+//sticky hero
+const hero = document.querySelector('.hero');
+  gsap.to(hero, {
+    duration: 1,
+    scale: 0.4,
+    scrollTrigger: {
+      trigger: hero,
+      start: 'top top',
+      end: 'bottom -20%',
+      scrub: 2,
+      toggleActions: 'restart none none none',
+      pin: hero,
+      pinSpacing: true,
+      markers: false
+    }
+  });
+
+//STICKY BUTTONS
+if(window.innerWidth > 768){
+  const worksMenu = document.querySelector('.works-menu');
+  gsap.to(worksMenu, {
+    scrollTrigger: {
+      trigger: worksMenu,
+      start: '10% 0%',
+      end: () => document.documentElement.scrollHeight - window.innerHeight,
+      scrub: true,
+      toggleActions: 'restart none none none',
+      pin: worksMenu,
+      pinSpacing: false,
+      markers: false
+    }
+  });
+}
