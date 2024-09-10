@@ -75,7 +75,10 @@
   .relative > * {
     position:relative; 
   }
-  
+
+  #idContainer::before {
+    position: fixed !important;
+  }  
 
 body {
     background-color: var(--bg);
@@ -92,7 +95,7 @@ body {
     border: 1px solid var(--text);
     position: fixed;
     top: 0; left: 0;
-    z-index: 9999999;
+    z-index: 9999;
     mix-blend-mode: difference;
     transform: translate(-64px, -64px);
     transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
@@ -106,7 +109,7 @@ body {
     background: var(--text);
     position: fixed;
     top: 0; left: 0;
-    z-index: 9999999;
+    z-index: 9999;
     transform: translate(-8px, -8px);
     pointer-events: none;
     mix-blend-mode: difference;
@@ -322,7 +325,7 @@ section {
     padding-bottom: 0.5;
     left: 0;
     width: 100%;
-    z-index: 999999;
+    z-index: 999;
     background: linear-gradient(180deg, rgba(7,5,20,1) 27%, rgba(8,4,30,0.865983893557423) 47%, rgba(8,3,39,0.5) 78%, rgba(9,2,49,0.15) 96%);
     backdrop-filter: blur(3px);
     
@@ -393,7 +396,7 @@ section {
     /* position: sticky !important; */
 /*     top: 17px; */
     /* margin-bottom: -3%; */
-    z-index: 50;
+    z-index: 2;
 }
 
 @media screen and (max-width: 768px) {
