@@ -232,7 +232,6 @@ var options = {
   grainHeight: 1
 };
 grained('#idContainer', options)
-grained('#top', options)
 
 
 //sticky hero
