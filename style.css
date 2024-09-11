@@ -145,7 +145,7 @@ h1 {
 
 
 h2 {
-    font-size: 64px;
+    font-size: 62px;
     font-weight: 600;
     line-height: 75px;
     text-transform: uppercase;
@@ -160,7 +160,7 @@ h3 {
 }
 
 h4 {
-    font-size: 66px;
+    font-size: 64px;
     line-height: 74px;
     padding-top: 0px;
     margin: 0;
@@ -196,7 +196,7 @@ a:hover {
 }
 
 p {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 22px;
     margin-bottom: 5%;
     text-align: justify;
@@ -763,8 +763,8 @@ html.lenis, html.lenis body {
     }
 
     h4 {
-        font-size: 50px;
-        line-height: 66px;
+        font-size: 42px;
+        line-height: 54px;
         letter-spacing: 0.22rem;
     }
 
@@ -774,8 +774,8 @@ html.lenis, html.lenis body {
     }
 
     p {
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 18px;
+        line-height: 24px;
     }  
 
     .hero-content {
@@ -857,8 +857,8 @@ html.lenis, html.lenis body {
     }
 
     h4 {
-        font-size: 48px;
-        line-height: 62px;
+        font-size: 38px;
+        line-height: 48px;
         letter-spacing: 0.18rem;
     }
 
@@ -879,8 +879,8 @@ html.lenis, html.lenis body {
     }
 
     p {
-        font-size: 18px;
-        line-height: 23px;
+        font-size: 17px;
+        line-height: 22px;
     }  
 
     .work-info-label{
@@ -964,8 +964,8 @@ html.lenis, html.lenis body {
     }
 
     h4 {
-        font-size: 36px;
-        line-height: 48px;
+        font-size: 32px;
+        line-height: 44px;
         letter-spacing: 0.16rem;
     }
 
@@ -986,8 +986,8 @@ html.lenis, html.lenis body {
     }
 
     p {
-        font-size: 17px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 19px;
     }  
 
     .work-info-label{
@@ -1087,8 +1087,8 @@ html.lenis, html.lenis body {
     }
 
     h4 {
-        font-size: 6vw;
-        line-height: 10vw;
+        font-size: 5.8vw;
+        line-height: 9.6vw;
         letter-spacing: 0.14rem;
     }
 
