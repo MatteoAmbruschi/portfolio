@@ -175,7 +175,6 @@ function generateRandomLetters() {
     splitTypes.forEach((char, i) => {
         const result = Splitting({ target: char, by: 'chars'})
         const text = result[0].chars;
-        console.log(text)
   
         gsap.from(text, {
             scrollTrigger: {
@@ -188,8 +187,42 @@ function generateRandomLetters() {
             opacity: 0.2,
             stagger: 0.1,
         })
+
+      //EFFETTO NAV
+      const splitNav = document.querySelectorAll('.linkText')
+      splitNav.forEach((e) => {
+        const text = e.querySelector('.textLink')
+        const shadow = e.querySelector('.shadow')
+
+        const splittedText = Splitting({ target: text, by: 'chars'})
+        const splittedShadow = Splitting({ target: shadow, by: 'chars'})
+
+        gsap.set(splittedShadow[0].chars, { scaleY: 0})
+
+        e.addEventListener('mouseenter', () => {
+          gsap.to(splittedText[0].chars, {
+            scaleY: 0,
+            duration: (i) => 0.15 + i * 0.048
+          })
+          gsap.to(splittedShadow[0].chars, {
+            scaleY: 1,
+            duration: (i) =>  0.15 + i * 0.048
+          })
+        })
+
+        e.addEventListener('mouseleave', () => {
+          gsap.to(splittedText[0].chars, {
+            scaleY: 1,
+            duration: (i) =>  0.15 + i * 0.04
+          })
+          gsap.to(splittedShadow[0].chars, {
+            scaleY: 0,
+            duration: (i) =>  0.15 + i * 0.04
+          })
+        })
+      })
     })
-  
+
     function applyOpacity(opc) {
       gsap.from(opc, {
         opacity: 0.1,
@@ -226,7 +259,7 @@ var options = {
   animate: true,
   patternWidth: 140,
   patternHeight: 140,
-  grainOpacity: 0.063,
+  grainOpacity: 0.060,
   grainDensity: 1,
   grainWidth: 1,
   grainHeight: 1
