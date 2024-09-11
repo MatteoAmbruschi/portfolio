@@ -818,12 +818,9 @@ html.lenis, html.lenis body {
     }
 
     .splin, .splin2{
-        height: 50%;
-        width: 20%;
+        height: 280px;
+        width: 200px;
        }
-
-       .splin2{ left: 65%; }
-       .splin{ right: 65%; }
        
        #lazy-load-poster {
         height: 210px;
@@ -921,13 +918,10 @@ html.lenis, html.lenis body {
             font-size: 18px;
         }
 
-        .splin, .splin2{
-            height: 40%;
-            width: 23%;
+           .splin, .splin2{
+            height: 280px;
+            width: 180px;
            }
-    
-           .splin2{ left: 68%; }
-           .splin{ right: 68%; }
     
     .contacts {
         margin-bottom: 70px;
@@ -1050,7 +1044,7 @@ html.lenis, html.lenis body {
             
             .splin, .splin2{
                 height: 280px;
-                width: 220px;
+                width: 200px;
                 position: static;
                }
         
