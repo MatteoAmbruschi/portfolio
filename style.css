@@ -78,6 +78,8 @@
 
   #idContainer::before {
     position: fixed !important;
+    height: 300vh !important;
+    width: 300vw !important;
   }  
 
 body {
