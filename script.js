@@ -72,7 +72,7 @@ cells.forEach(cell => {
 
 //////GSAP
 /* gsap.to(".hero-content", { opacity: 1, duration: 2.5,}); */
-gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 30, delay: 0.4,});
+/* gsap.to(".hero-cta", { opacity: 1, duration: 1, y: 30, delay: 0.4,}); */
 
 
 //3 pulsanti viola lavoro
@@ -100,20 +100,6 @@ if(window.innerWidth > 769){
   
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector('.button');
-  {const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        gsap.to('.button', { opacity: 1, duration: 1.3, stagger: 0.3 });
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-  observer.observe(button);}
-})
-
 
 //Lavori
 const watchElements  = document.querySelectorAll('.watch')
@@ -221,6 +207,24 @@ function generateRandomLetters() {
           })
         })
       })
+
+      //FINE LOADER
+      if(currentValue < 50) {
+        currentValue = 70
+      }
+      
+      //observer PULSANTI
+      const button = document.querySelector('.button');
+      {const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gsap.to('.button', { opacity: 1, duration: 1.3, stagger: 0.4 });
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      observer.observe(button);}
+
     })
 
     function applyOpacity(opc) {
@@ -300,3 +304,52 @@ if(window.innerWidth > 768){
     }
   });
 }
+
+
+//LOADER
+  let counterElement = document.querySelector('.counter')
+  let currentValue = 0
+    function updateCounter() {
+      if(currentValue === 100) {
+        scrollTo(0, 0);
+        gsap.to(counterElement, {
+          duration: 0.25,
+          delay: 0.5,
+          opacity: 0,
+          display: 'none',
+        })
+        
+        gsap.to('.bar', {
+          duration: 1.5,
+          delay: 0.5,
+          height: 0,
+          stagger: {
+            amount: 0.5
+          },
+          ease: "power4.inOut",
+          onComplete: () => {
+            gsap.to('.overlay', {
+              height: 0,
+            }),
+            gsap.to(".hero-cta", 
+              { opacity: 1, 
+                duration: 1, 
+                y: 30, 
+                delay: 0.4,
+              });
+          }
+        })
+        
+        return;
+      }
+
+      currentValue += Math.floor(Math.random() * 5) + 1;
+      if(currentValue > 100) {
+        currentValue = 100;
+      }
+
+      counterElement.textContent = `${currentValue}%`;
+      let delay = Math.floor(Math.random() * 200) + 10;
+      setTimeout(updateCounter, delay)
+    }
+     updateCounter()
