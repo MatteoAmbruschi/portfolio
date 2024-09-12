@@ -1,7 +1,5 @@
 gsap.registerPlugin(ScrollTrigger)
 
-Splitting(); 
-
 // freccia torna su
 const backBtn = document.getElementById('backBtn');
 
@@ -48,7 +46,57 @@ links.forEach((link) => {
 });
 
 
+//LOADER
+let counterElement = document.querySelector('.counter')
+let currentValue = 0
+  function updateCounter() {
+    if(currentValue === 100) {
+      scrollTo(0, 0);
+      gsap.to(counterElement, {
+        duration: 0.25,
+        delay: 0.5,
+        opacity: 0,
+        display: 'none',
+      })
+      
+      gsap.to('.bar', {
+        duration: 1.5,
+        delay: 0.5,
+        height: 0,
+        stagger: {
+          amount: 0.5
+        },
+        ease: "power4.inOut",
+        onComplete: () => {
+          gsap.to('.overlay', {
+            height: 0,
+          }),
+          gsap.to(".hero-cta", 
+            { opacity: 1, 
+              duration: 1, 
+              y: 30, 
+              delay: 0.4,
+            });
+        }
+      })
+      
+      return;
+    }
+
+    currentValue += Math.floor(Math.random() * 5) + 1;
+    if(currentValue > 100) {
+      currentValue = 100;
+    }
+
+    counterElement.textContent = `${currentValue}%`;
+    let delay = Math.floor(Math.random() * 200) + 10;
+    setTimeout(updateCounter, delay)
+  }
+   updateCounter()
+
+
 //SLPLITING
+Splitting();
 const results = Splitting({
   target: '.hero', // Target la sezione hero
   by: 'cells',     // Segmenta in celle (griglia)
@@ -304,52 +352,3 @@ if(window.innerWidth > 768){
     }
   });
 }
-
-
-//LOADER
-  let counterElement = document.querySelector('.counter')
-  let currentValue = 0
-    function updateCounter() {
-      if(currentValue === 100) {
-        scrollTo(0, 0);
-        gsap.to(counterElement, {
-          duration: 0.25,
-          delay: 0.5,
-          opacity: 0,
-          display: 'none',
-        })
-        
-        gsap.to('.bar', {
-          duration: 1.5,
-          delay: 0.5,
-          height: 0,
-          stagger: {
-            amount: 0.5
-          },
-          ease: "power4.inOut",
-          onComplete: () => {
-            gsap.to('.overlay', {
-              height: 0,
-            }),
-            gsap.to(".hero-cta", 
-              { opacity: 1, 
-                duration: 1, 
-                y: 30, 
-                delay: 0.4,
-              });
-          }
-        })
-        
-        return;
-      }
-
-      currentValue += Math.floor(Math.random() * 5) + 1;
-      if(currentValue > 100) {
-        currentValue = 100;
-      }
-
-      counterElement.textContent = `${currentValue}%`;
-      let delay = Math.floor(Math.random() * 200) + 10;
-      setTimeout(updateCounter, delay)
-    }
-     updateCounter()
